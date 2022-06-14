@@ -17,6 +17,12 @@
 
 .operator {
   background-color: #00471b;
+}
 
+.button_container:hover {
+  background-color: #5a01a7;
+}
 
+.operator:hover {
+  background-color: #ff6600;
 }
