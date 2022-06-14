@@ -2,6 +2,7 @@ import '../src/styles/App.css';
 import freeCodeCampLogo from '../src/img/freecodecamp-logo.png';
 import Button from './components/Button';
 import Screen from './components/Screen';
+import ClearButton from './components/ClearButton';
 
 function App() {
   return (
@@ -44,7 +45,11 @@ function App() {
           <Button>/</Button>
         </div>
 
-        <div className='row'></div>
+        <div className='row'>
+          <ClearButton>
+            Clear
+          </ClearButton>
+        </div>
       </div>
     </div>
   );
