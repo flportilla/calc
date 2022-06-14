@@ -1,5 +1,6 @@
 import '../src/styles/App.css';
 import freeCodeCampLogo from '../src/img/freecodecamp-logo.png';
+import Button from './components/Button';
 
 function App() {
   return (
@@ -12,7 +13,13 @@ function App() {
         />
       </div>
       <div className='calc_container'>
-
+        <div className='row'>
+          <Button>1</Button>
+        </div>
+        <div className='row'></div>
+        <div className='row'></div>
+        <div className='row'></div>
+        <div className='row'></div>
       </div>
     </div>
   );
