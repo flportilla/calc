@@ -15,6 +15,7 @@ function App() {
       <div className='calc_container'>
         <div className='row'>
           <Button>1</Button>
+          <Button>+</Button>
         </div>
         <div className='row'></div>
         <div className='row'></div>

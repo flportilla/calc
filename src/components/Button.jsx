@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Button.css'
 
 function Button({ children }) {
 
@@ -8,9 +9,13 @@ function Button({ children }) {
 
   return (
     <div
-      className={`button_container ${isOperator(children) ? 'operator' : null}`}
+      className={
+        `button_container ${isOperator(children) ?
+          'operator' :
+          ''}`
+          .trimEnd()}
     >
-      <button>{children}</button>
+      {children}
     </div>
   )
 }
