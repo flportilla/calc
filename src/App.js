@@ -14,6 +14,8 @@ function App() {
   }
 
   function handleResult() {
+    if (!screenValue) return alert('Please enter a number');
+
     setScreenValue(eval(screenValue));
   }
 
