@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Button.css'
 
-function Button({ children }) {
+function Button({ children, handleClick }) {
 
   function isOperator(value) {
     return isNaN(value) && (value !== '.') && (value !== '=')
@@ -14,6 +14,7 @@ function Button({ children }) {
           'operator' :
           ''}`
           .trimEnd()}
+      onClick={() => handleClick(children)}
     >
       {children}
     </div>

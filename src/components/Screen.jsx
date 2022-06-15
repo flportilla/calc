@@ -1,11 +1,12 @@
 import React from 'react'
 import '../styles/Screen.css'
 
-function Screen() {
+function Screen({ input }) {
   return (
     <div
-      className='input'
+      className='screen'
     >
+      {input}
     </div>
   )
 }
