@@ -13,6 +13,10 @@ function App() {
     setScreenValue(screenValue + value);
   }
 
+  function handleResult() {
+    setScreenValue(eval(screenValue));
+  }
+
   return (
     <div className='App'>
       <div className='freecodecamp_logo_container'>
@@ -47,7 +51,7 @@ function App() {
         </div>
 
         <div className='row'>
-          <Button handleClick={addInput}>=</Button>
+          <Button handleClick={handleResult}>=</Button>
           <Button handleClick={addInput}>0</Button>
           <Button handleClick={addInput}>.</Button>
           <Button handleClick={addInput}>/</Button>
@@ -58,6 +62,7 @@ function App() {
             Clear
           </ClearButton>
         </div>
+
       </div>
     </div>
   );
