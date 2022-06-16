@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas</title>
+
+  <style>
+    body {
+      margin: 50px;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .canvas {
+      overflow-y: hidden;
+      width: 500px;
+      min-height: 800px;
+      border: 1px solid black;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .ball {
+      width: 100px;
+      height: 100px;
+      background-color: #f00;
+      align-self: center;
+      border-radius: 50%;
+      transition: all 2s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="canvas">
+    <div class="scoreBoard">Score : 0</div>
+    <div class="ball"></div>
+  </div>
+
+  <script>
+
+    const ball = document.querySelector('.ball');
+    const canvas = document.querySelector('.canvas')
+    const scoreBoard = document.querySelector('.scoreBoard')
+
+    let pxUp = -100;
+    let score = 0;
+    let dificult;
+
+
+    function handleUp(e) {
+      score++
+      dificult = (pxUp * (score / 2))
+
+      e.target.style.transform = `translateY(${dificult}px)`
+
+      scoreBoard.innerText = `Score ${score}`
+
+
+    }
+
+    function handleDown(e) {
+
+      const position = e.target.getBoundingClientRect().y
+
+      if (position == 751.5) {
+        score = 0
+      }
+      e.target.style.transform = `translateY(${0}px)`
+    }
+
+    canvas.addEventListener('transitionend', handleDown);
+    ball.addEventListener('click', handleUp);
+
+  </script>
+</body>
+
+</html>
